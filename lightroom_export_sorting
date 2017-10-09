@@ -19,16 +19,33 @@ for file in *; do mv "$file" `echo $file | tr ', ' '_'` ; done
 
 IFS=$'\n'   # sets field separator to newline; makes the script ignore
 	    # spaces when word-splitting
-      
-for file in *; do    #no need for "in", for loops default to reading "$@"
 
-	dir="${file#*__}"    #strip everything up to the first "__" in the name
-  
-  
-	dir="${dir%%_*}"    #strip everything after the first "_" in the name
-	dir="${dir//.jpg/}"   #removes .jpg in the dirname (for tag).
-  
-  mkdir -p "$dir"
-	mv -t "$dir" "$file"
+for file in *; do dir="${file#*__}"; dir="${dir%%_*}"; dir="${dir//.jpg/}"; mkdir -p "$dir"; mv -t "$dir" "$file"; done
 
-done
+#strip everything up to the first "__" in the name
+#strip everything after the first "_" in the name
+#removes .jpg in the dirname (for tag).
+
+## copies all files from the subdirectories into the parent directory
+cp */* .
+
+## within head directory, make subdirectories for different types of heads
+for file in *; do dir="${file#*head_}"; dir="${dir%%-*}"; dir="${dir//.jpg/}"; mkdir -p "$dir"; mv -t "$dir" "$file"; done 
+
+#body
+for file in *; do dir="${file#*body_}"; dir="${dir%%-*}"; dir="${dir//.jpg/}"; mkdir -p "$dir"; mv -t "$dir" "$file"; done 
+
+#toepads
+for file in *; do dir="${file#*toepad_}"; dir="${dir%%-*}"; dir="${dir//.jpg/}"; mkdir -p "$dir"; mv -t "$dir" "$file"; done 
+
+
+
+
+
+
+##not working out for now
+
+##$ for file in *; do dir="${file#*__}"; dir="${dir%%_*}"; dir="${dir//.jpg/}"; mkdir -p "$dir"; mv -t "$dir" "$file"; done ; 
+##cd .. ; cd head/ ; for file in *; do dir="${file#*head_}"; dir="${dir%%-*}"; dir="${dir//.jpg/}"; mkdir -p "$dir"; mv -t "$dir" "$file"; done ;
+##cd .. ; cd body/ ; for file in *; do dir="${file#*body_}"; dir="${dir%%-*}"; dir="${dir//.jpg/}"; mkdir -p "$dir"; mv -t "$dir" "$file"; done ;
+##cd .. ; cd toepad/ ; for file in *; do dir="${file#*toepad_}"; dir="${dir%%-*}"; dir="${dir//.jpg/}"; mkdir -p "$dir"; mv -t "$dir" "$file"; done
