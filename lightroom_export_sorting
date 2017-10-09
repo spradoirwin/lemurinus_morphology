@@ -11,13 +11,15 @@ for file in *; do mv "$file" `echo $file | tr ', ' '_'` ; done
 
 
 
-IFS=$'\n'   # sets field separator to newline; makes the script ignore
-	    # spaces when word-splitting
-      
+
 ## make directories based on body region tag (body, head, toepad, tag)
 ## sort files into directories
 ## source https://www.linuxquestions.org/questions/linux-software-2/script-to-sort-files-based-on-part-of-file-name-888195/
 
+
+IFS=$'\n'   # sets field separator to newline; makes the script ignore
+	    # spaces when word-splitting
+      
 for file in *; do    #no need for "in", for loops default to reading "$@"
 
 	dir="${file#*__}"    #strip everything up to the first "__" in the name
