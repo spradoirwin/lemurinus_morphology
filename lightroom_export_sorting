@@ -42,8 +42,13 @@ for file in *; do dir="${file#*toepad_}"; dir="${dir%%-*}"; dir="${dir//.jpg/}";
 
 
 ##### FIJI processing ####
+## https://sils.fnwi.uva.nl/bcb/objectj/2-Tutorial.html
+## open object J 
+## start/save new project into folder with image (e.g. in head lateral folder); needs to be in same folder as pics
+## define objects as scale types
+## define columns as 1) id 2-n) counts of each scale type
+## link all images in the folder by drag and drop into imagej
+## click through scales
+## click ObjectJ results
+## export
 
-## import stack into FIJI - e.g. all head dorsal
-## use Cell counter to click through different scale types
-## can't figure out how to rename them on startup - maybe that's possible, otherwise just use numbers
-## results - will show for whole stack
