@@ -41,11 +41,9 @@ for file in *; do dir="${file#*toepad_}"; dir="${dir%%-*}"; dir="${dir//.jpg/}";
 
 
 
+##### FIJI processing ####
 
-
-##not working out for now
-
-##$ for file in *; do dir="${file#*__}"; dir="${dir%%_*}"; dir="${dir//.jpg/}"; mkdir -p "$dir"; mv -t "$dir" "$file"; done ; 
-##cd .. ; cd head/ ; for file in *; do dir="${file#*head_}"; dir="${dir%%-*}"; dir="${dir//.jpg/}"; mkdir -p "$dir"; mv -t "$dir" "$file"; done ;
-##cd .. ; cd body/ ; for file in *; do dir="${file#*body_}"; dir="${dir%%-*}"; dir="${dir//.jpg/}"; mkdir -p "$dir"; mv -t "$dir" "$file"; done ;
-##cd .. ; cd toepad/ ; for file in *; do dir="${file#*toepad_}"; dir="${dir%%-*}"; dir="${dir//.jpg/}"; mkdir -p "$dir"; mv -t "$dir" "$file"; done
+## import stack into FIJI - e.g. all head dorsal
+## use Cell counter to click through different scale types
+## can't figure out how to rename them on startup - maybe that's possible, otherwise just use numbers
+## results - will show for whole stack
