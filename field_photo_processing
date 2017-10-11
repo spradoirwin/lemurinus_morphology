@@ -4,3 +4,9 @@
 ## custom settings in export will include {folder name>>}_{keywords>>}, should export with no commas or no spaces if only one keyword
 
 ## copy the code from museumlemurinus file to sort into folders
+for file in *; do dir="${file#*_}"; dir="${dir%%_*}"; dir="${dir//.jpg/}"; mkdir -p "$dir"; mv -t "$dir" "$file"; done
+
+#strip everything up to the first "_" in the name
+#strip everything after the first "_" in the name
+#removes .jpg in the dirname (for dewlap)
+
