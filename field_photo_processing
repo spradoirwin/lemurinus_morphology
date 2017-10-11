@@ -1,0 +1,6 @@
+## already organized into directories labeled by id
+## import files into lightroom - tag based on body part
+## export files from lightroom based on tag names and folder
+## custom settings in export will include {folder name>>}_{keywords>>}, should export with no commas or no spaces if only one keyword
+
+## copy the code from museumlemurinus file to sort into folders
