@@ -52,3 +52,5 @@ for file in *; do dir="${file#*toepad_}"; dir="${dir%%-*}"; dir="${dir//.jpg/}";
 ## click ObjectJ results
 ## export
 
+## can copy same empty "project" into another folder, so don't have to re-name variables, etc.
+## copy projects into field_data folders
