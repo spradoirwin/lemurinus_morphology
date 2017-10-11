@@ -10,3 +10,19 @@ for file in *; do dir="${file#*_}"; dir="${dir%%_*}"; dir="${dir//.jpg/}"; mkdir
 #strip everything after the first "_" in the name
 #removes .jpg in the dirname (for dewlap)
 
+
+## within head directory, make subdirectories for different types of heads
+for file in *; do dir="${file#*head_}"; dir="${dir%%-*}"; dir="${dir//.jpg/}"; mkdir -p "$dir"; mv -t "$dir" "$file"; done 
+
+#body
+for file in *; do dir="${file#*body_}"; dir="${dir%%-*}"; dir="${dir//.jpg/}"; mkdir -p "$dir"; mv -t "$dir" "$file"; done 
+
+#toepads
+cd ../toepads/
+for file in *; do dir="${file#*toepad_}"; dir="${dir%%-*}"; dir="${dir//.jpg/}"; mkdir -p "$dir"; mv -t "$dir" "$file"; done 
+
+#head
+cd ../head/
+for file in *; do dir="${file#*head_}"; dir="${dir%%-*}"; dir="${dir//.jpg/}"; mkdir -p "$dir"; mv -t "$dir" "$file"; done 
+
+## error in toepads - some duplicated. deleted by hand.
