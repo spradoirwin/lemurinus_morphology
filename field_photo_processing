@@ -17,9 +17,10 @@ for file in *; do dir="${file#*head_}"; dir="${dir%%-*}"; dir="${dir//.jpg/}"; m
 #body
 for file in *; do dir="${file#*body_}"; dir="${dir%%-*}"; dir="${dir//.jpg/}"; mkdir -p "$dir"; mv -t "$dir" "$file"; done 
 
-#toepads
-cd ../toepads/
-for file in *; do dir="${file#*toepad_}"; dir="${dir%%-*}"; dir="${dir//.jpg/}"; mkdir -p "$dir"; mv -t "$dir" "$file"; done 
+## took toepads out of directory; will be better to import them all at once
+cp */* .
+
+# deleted directories
 
 #head
 cd ../head/
