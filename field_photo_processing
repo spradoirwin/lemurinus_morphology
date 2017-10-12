@@ -21,6 +21,10 @@ for file in *; do dir="${file#*body_}"; dir="${dir%%-*}"; dir="${dir//.jpg/}"; m
 cp */* .
 
 # deleted directories
+# tagged scales with "scale" in lightroom
+# exported those, added to toepad folder
+# import them, scale only shows up in first one of the set
+
 
 #head
 cd ../head/
