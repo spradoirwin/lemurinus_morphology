@@ -3,6 +3,8 @@
 ## have to export in batches, because I can't figure out how to sort by multiple keywords all at once
 ## will export as '111111, bodypart_orientation'
 
+## use Quick Develop - Auto Tone tool to do some basic color/light correcting, see scales better
+
 ## change file names to '111111_bodypart_orientation'
 
 cd /cygdrive/e/research/test_set_527/
