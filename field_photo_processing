@@ -46,3 +46,10 @@ for file in *; do dir="${file#*_}"; dir="${dir%%_*}"; dir="${dir//.jpg/}"; mkdir
 
 ## accidentally tagged phf021 twice, manually deleted extra 
 
+
+
+
+## LA SELVA
+## need to re-name and copy scale
+## tags already re-named in lightroom
+## re-exported scales with new names
