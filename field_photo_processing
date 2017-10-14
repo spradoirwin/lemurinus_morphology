@@ -31,3 +31,18 @@ cd ../head/
 for file in *; do dir="${file#*head_}"; dir="${dir%%-*}"; dir="${dir//.jpg/}"; mkdir -p "$dir"; mv -t "$dir" "$file"; done 
 
 ## error in toepads - some duplicated. deleted by hand.
+
+
+
+## UTILA
+## went through and made sure correct scale bar is associated with each pic - based on field data spreadsheet
+## the _toepad_scale is alphabetically last, so I renamed tag to scale_toepad
+## created new scale_toepad folder, moves the scales to toepad folder
+
+mv -v scale/* ../lightroom_export_tagged_active/toepad
+
+## in lightroom_export_tagged
+for file in *; do dir="${file#*_}"; dir="${dir%%_*}"; dir="${dir//.jpg/}"; mkdir -p "$dir"; mv -t "$dir" "$file"; done
+
+## accidentally tagged phf021 twice, manually deleted extra 
+
