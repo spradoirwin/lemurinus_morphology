@@ -12,10 +12,10 @@ for file in *; do dir="${file#*_}"; dir="${dir%%_*}"; dir="${dir//.jpg/}"; mkdir
 
 
 ## within head directory, make subdirectories for different types of heads
-for file in *; do dir="${file#*head_}"; dir="${dir%%-*}"; dir="${dir//.jpg/}"; mkdir -p "$dir"; mv -t "$dir" "$file"; done 
+for file in *; do dir="${file#*head_}"; dir="${dir%%-*}"; dir="${dir//.jpg/}"; mkdir -p "$dir"; mv -t "$dir" "$file"; done
 
 #body
-for file in *; do dir="${file#*body_}"; dir="${dir%%-*}"; dir="${dir//.jpg/}"; mkdir -p "$dir"; mv -t "$dir" "$file"; done 
+for file in *; do dir="${file#*body_}"; dir="${dir%%-*}"; dir="${dir//.jpg/}"; mkdir -p "$dir"; mv -t "$dir" "$file"; done
 
 ## took toepads out of directory; will be better to import them all at once
 cp */* .
@@ -28,7 +28,7 @@ cp */* .
 
 #head
 cd ../head/
-for file in *; do dir="${file#*head_}"; dir="${dir%%-*}"; dir="${dir//.jpg/}"; mkdir -p "$dir"; mv -t "$dir" "$file"; done 
+for file in *; do dir="${file#*head_}"; dir="${dir%%-*}"; dir="${dir//.jpg/}"; mkdir -p "$dir"; mv -t "$dir" "$file"; done
 
 ## error in toepads - some duplicated. deleted by hand.
 
@@ -44,7 +44,7 @@ mv -v scale/* ../lightroom_export_tagged_active/toepad
 ## in lightroom_export_tagged
 for file in *; do dir="${file#*_}"; dir="${dir%%_*}"; dir="${dir//.jpg/}"; mkdir -p "$dir"; mv -t "$dir" "$file"; done
 
-## accidentally tagged phf021 twice, manually deleted extra 
+## accidentally tagged phf021 twice, manually deleted extra
 
 
 
@@ -53,3 +53,8 @@ for file in *; do dir="${file#*_}"; dir="${dir%%_*}"; dir="${dir//.jpg/}"; mkdir
 ## need to re-name and copy scale
 ## tags already re-named in lightroom
 ## re-exported scales with new names
+
+
+
+
+##this isa test to see if I can use gitkraken well
