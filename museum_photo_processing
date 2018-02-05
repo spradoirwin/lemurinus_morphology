@@ -1,4 +1,5 @@
-
+## tag files in lightroom with ID and with contents
+## only tag photos that are the best representative of each type - will export based on names, only export the ones that have been labeled
 ## export files from lightroom based on tag names
 ## have to export in batches, because I can't figure out how to sort by multiple keywords all at once
 ## will export as '111111, bodypart_orientation'
